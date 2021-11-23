@@ -17,7 +17,17 @@ struct ReportsListView: View {
             
             
             ForEach(listOfReports) {currentReport in
-                Text(currentReport.name)
+                
+                NavigationLink(destination: {
+                    Text("\currentReport.grade)")
+                }, label: {
+                    Text(currentReport.name)
+                })
+                
+                
+                
+                
+                
                 
             }
         }
