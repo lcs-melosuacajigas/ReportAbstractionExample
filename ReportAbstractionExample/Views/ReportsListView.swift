@@ -19,7 +19,7 @@ struct ReportsListView: View {
             ForEach(listOfReports) {currentReport in
                 
                 NavigationLink(destination: {
-                    Text("\(currentReport.grade)")
+                   SwiftUIView(thisReport: currentReport)
                 }, label: {
                     Text(currentReport.name)
                 })

@@ -9,15 +9,21 @@ import SwiftUI
 
 // A structure named "ReportDataView"
 struct SwiftUIView: View {
+    
+    //MARK: Stored properties
+    let thisReport: Report
+    
+    
+    //MARK: Computed properties
     var body: some View {
         ScrollView {
             VStack {
                 Text(thisReport.name)
-                Text(thisReport.grade)
-                Text
+                Text("\(thisReport.grade)")
+                Text(thisReport.comment)
             }
         }
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
     }
 }
 
@@ -27,11 +33,9 @@ struct SwiftUIView_Previews: PreviewProvider {
         // Because there is a stored property named "thisReport"
         // in ReportDetailView...
         //
+        //... to create an INSTANCE of ReportDetailView...
         //
-        
-        
-        
-        
-        SwiftUIView(thisReport: listOfReports.first)
+        //... we must provide an instance of the Report type
+        SwiftUIView(thisReport: listOfReports.first!)
     }
 }
